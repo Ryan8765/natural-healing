@@ -100,117 +100,48 @@
 			<div id="content">
 				
 
-
-				<div class="row">	
-					<h3 class="centered">Create Treatment</h3>
-
-					<div class="col-md-4 col-md-offset-4">
-						<div class="form-group">
-							<h4>Description of Treatment</h4>
-							<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
-						</div>
-						<div class="form-group">
-							<h4>Precautions/Side Effects Noted</h4>
-							<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
-						</div>
-						<div class="form-group">
-							<h4 class="margin-top">Add Treatment Items</h4>
-							<div class="row">
-								<div class="col-md-6">
-									<label for="">Name</label>
-									<input class="form-control treatment-item" type="text" placeholder="Name">
-								</div>
-								<div class="col-md-6">
-									<label for="">Brand Name</label>
-									<input class="form-control treatment-item" type="text" placeholder="Brand Name">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<label for="">Dosage/Frequency</label>
-									<input class="form-control treatment-item" type="text" placeholder="Dosage/Frequency">
-								</div>
-								<div class="col-md-6">
-									<label for="">Cost</label>
-									<input class="form-control treatment-item" type="number" placeholder="Cost" min="0">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<label for="">Miscellaneous Notes</label>
-									<input class="form-control treatment-item" type="text" placeholder="Misc">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="row">
-					<div class="col-md-2 col-md-offset-5 margin-top-sm">
-						<input id="add-item" type="submit" class="form-control styled-button" value="Add Item" name="submit-doctor">
+					<div class="col-md-6 col-md-offset-3">
+						<h3 class="centered">Login</h3>
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 margin-top-sm">
+								<form action="">
+									<label for="email">Email</label>
+									<input type="email" class="form-control">
+									<label for="password">Password</label>
+									<input type="password" class="form-control">
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3">
-						<h4 class="centered margin-top">Treatment Items</h4>
-						<table id="treatment-item-table" class="table table-bordered table-style">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Brand Name</th>
-									<th>Dosage/Frequency</th>
-									<th>Misc Notes</th>
-									<th>Cost</th>
-								</tr>
-							</thead>
+						<p class="centered"><a href="">Forgot Password?</a></p>
+						<div class="row">
+							<div class="row">
+								<div class="col-md-4 col-md-offset-4">
+									<input class="form-control styled-button" type="submit" value="Submit" name="submit">
+								</div>
+							</div>
 							
-							<tbody id="append">
-								<tr>
-									<td>Charcoal</td>
-									<td>Natures Way</td>
-									<td>3/day</td>
-									<td>Write something</td>
-									<td>256$</td>
-									<td><span title="Remove" class="delete-treatment-item"><i class="fa fa-times-circle" aria-hidden="true"></i></span></td>
-								</tr>
-								<tr>
-									<td>Charcoal</td>
-									<td>Natures Way</td>
-									<td>3/day</td>
-									<td>Write something</td>
-									<td>256$</td>
-									<td><span title="Remove" class="delete-treatment-item"><i class="fa fa-times-circle" aria-hidden="true"></i></span></td>
-								</tr>
-								<tr>
-									<td>Charcoal</td>
-									<td>Natures Way</td>
-									<td>3/day</td>
-									<td>Write something</td>
-									<td>256$</td>
-									<td><span title="Remove" class="delete-treatment-item"><i class="fa fa-times-circle" aria-hidden="true"></i></span></td>
-								</tr>
-								<tr>
-									<td>Charcoal</td>
-									<td>Natures Way</td>
-									<td>3/day</td>
-									<td>Write something</td>
-									<td>256$</td>
-									<td><span title="Remove" class="delete-treatment-item"><i class="fa fa-times-circle" aria-hidden="true"></i></span></td>
-								</tr>
-
-							</tbody>
-						</table>
-					</div>
-					<div class="row">
-						<div class="col-md-2 col-md-offset-5">
+							<div class="row">
+								<div class="centered margin-top-sm">
+									OR
+								</div>
+							</div>
 							
-							<input type="submit" class="form-control styled-button" value="Submit Treatment">
+							<div class="row">
+								<div class="col-md-4 col-md-offset-4 margin-top-sm">
+									<input class="form-control styled-button" type="submit" value="Create Account" name="account">
+								</div>
+							</div>
 							
 						</div>
 					</div>
-
 				</div>
 				
-				
+
 
 			</div>
 			<!-- content -->
@@ -234,7 +165,7 @@
 
 <!-- Custom Scripts -->
 <script src="../js/custom-global.js"></script>
-<script src="../js/custom-create-condition.js"></script>
+
 
 
 

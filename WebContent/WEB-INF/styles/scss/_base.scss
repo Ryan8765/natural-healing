@@ -153,7 +153,7 @@ nav {
 }
 
 .margin-top-sm {
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 .table-style {
@@ -164,6 +164,49 @@ nav {
 }
 
 
+.delete-treatment-item {
+	color: $color-theme--md-light;
+	font-size: 1.5em;
+
+	&:hover {
+		cursor: pointer;
+		color: $color-theme--dark;
+	}
+}
+
+
+.rating-icon {
+	font-size: 2em;
+	color: #329C15;
+
+	&:last-child {
+		margin-left: 10px;
+	}
+}
+
+.rating-review {
+	font-weight: bolder;
+	color: $color-theme--md-dark;
+	font-size: 1.2em;
+}
+
+.num-reviews {
+	font-weight: bold;
+	color: $color-theme--md-light;
+}
+
+
+.user-likes {
+	color: $color-theme--md-light;
+}
+
+.comment-item {
+	border-bottom: 1px solid #E7E7E7;
+}
+
+
+
+
 
 
 
@@ -171,6 +214,18 @@ nav {
 
 /* Id's
 // =====================================*/
+
+#treatment-item-table td:last-child {
+	border-top: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+}
+
+table#treatment-item-table {
+    border-right: none;
+    border-bottom: none;
+}
+
 
 #condition-table {
 	th {
