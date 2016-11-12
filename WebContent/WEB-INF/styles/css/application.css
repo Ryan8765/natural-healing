@@ -151,6 +151,18 @@ nav {
 .comment-item {
   border-bottom: 1px solid #E7E7E7; }
 
+.crud-icon {
+  color: #757575;
+  float: right;
+  font-size: 1.5em;
+  margin-left: 15px; }
+  .crud-icon:hover {
+    color: #030202;
+    cursor: pointer; }
+
+.account-treatment a {
+  width: 100%; }
+
 /* Id's
 // =====================================*/
 #treatment-item-table td:last-child {

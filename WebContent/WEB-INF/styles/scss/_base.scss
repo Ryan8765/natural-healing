@@ -204,6 +204,28 @@ nav {
 	border-bottom: 1px solid #E7E7E7;
 }
 
+.crud-icon {
+	color: $color-theme--md-light;
+	float: right;
+	font-size: 1.5em;
+
+	&:hover {
+		color: $color-theme--md-dark;
+		cursor: pointer;
+	}
+
+	margin-left: 15px;
+}
+
+
+.account-treatment {
+	a {
+		width: 100%;
+	}
+}
+
+
+
 
 
 
