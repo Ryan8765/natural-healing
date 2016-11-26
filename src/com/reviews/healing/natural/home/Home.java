@@ -1,16 +1,16 @@
-package com.reviews.healing.natural.test;
+package com.reviews.healing.natural.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Test {
+public class Home {
 	
-	@RequestMapping("/test")
-	public String testOut( Model theModel ) {
+	@RequestMapping("/")
+	public String homeController( Model theModel ) {
 		
-		return "index.html";
+		return "index";
 	}
 
 }

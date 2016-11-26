@@ -165,6 +165,12 @@ nav {
 
 /* Id's
 // =====================================*/
+#general-user-signup {
+  display: none; }
+
+#doctor-signup {
+  display: none; }
+
 #treatment-item-table td:last-child {
   border-top: none !important;
   border-right: none !important;
