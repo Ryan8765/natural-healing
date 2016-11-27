@@ -17,6 +17,7 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDAO userDAO;
 	
+	
 	@Override
 	@Transactional
 	public List<User> getUsers() {
@@ -29,6 +30,16 @@ public class UserServiceImpl implements UserService {
 	public User getUser(int userID) {
 		// TODO Auto-generated method stub
 		return userDAO.getUser(userID);
+	}
+
+
+	@Override
+	@Transactional
+	public User getCurrentUser() {
+		//for right now force the user to be user #1. 
+		int currentUserID = 1;
+		User currentUser = userDAO.getUser(currentUserID);
+		return currentUser;
 	}
 	
 

@@ -43,7 +43,7 @@ public class UserDAOImpl implements UserDAO {
 		Session currentSession = sessionFactory.getCurrentSession();
 		
 		//create the query - use placeholders for sql injection projection.
-		Query theQuery = currentSession.createQuery("from Users where userID = :userID");
+		Query theQuery = currentSession.createQuery("from User where id = :userID");
 		theQuery.setParameter("userID", userID);
 		
 		User theUser = (User) theQuery.getSingleResult();

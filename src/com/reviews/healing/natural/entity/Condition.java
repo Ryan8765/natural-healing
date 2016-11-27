@@ -25,7 +25,7 @@ public class Condition {
 	private String description;
 	
 	@ManyToOne
-    @JoinColumn(name="related_user")
+	@JoinColumn(name="related_user")
 	private User related_user;
 	
 	@Column(name="approved")

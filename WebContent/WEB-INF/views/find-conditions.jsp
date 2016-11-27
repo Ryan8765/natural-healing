@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:include page="partials/header.jsp">
 	<jsp:param name="title" value="Conditions"/>
 </jsp:include>
@@ -10,32 +11,9 @@
 							    <input class="search form-control" placeholder="Search" />
 							    <ul class="pagination"></ul>
 							    <ul class="list centered">
-							    	<li><p class="search-item"><a href="">Abscess</a></p></li>
-							    	<li><p class="search-item"><a href="">Burn</a></p></li>
-							    	<li><p class="search-item"><a href="">Broken Bone</a></p></li>
-							    	<li><p class="search-item"><a href="">Cancer</a></p></li>
-							    	<li><p class="search-item"><a href="">Abscess</a></p></li>
-							    	<li><p class="search-item"><a href="">Burn</a></p></li>
-							    	<li><p class="search-item"><a href="">Broken Bone</a></p></li>
-							    	<li><p class="search-item"><a href="">Cancer</a></p></li>
-							    	<li><p class="search-item"><a href="">Abscess</a></p></li>
-							    	<li><p class="search-item"><a href="">Burn</a></p></li>
-							    	<li><p class="search-item"><a href="">Broken Bone</a></p></li>
-							    	<li><p class="search-item"><a href="">Cancer</a></p></li>
-							    	<li><p class="search-item"><a href="">Abscess</a></p></li>
-							    	<li><p class="search-item"><a href="">Burn</a></p></li>
-							    	<li><p class="search-item"><a href="">Broken Bone</a></p></li>
-							    	<li><p class="search-item"><a href="">Cancer</a></p></li>
-							    	<li><p class="search-item"><a href="">Abscess</a></p></li>
-							    	<li><p class="search-item"><a href="">Burn</a></p></li>
-							    	<li><p class="search-item"><a href="">Broken Bone</a></p></li>
-							    	<li><p class="search-item"><a href="">Cancer</a></p></li>
-							    	<li><p class="search-item"><a href="">Abscess</a></p></li>
-							    	<li><p class="search-item"><a href="">Burn</a></p></li>
-							    	<li><p class="search-item"><a href="">Broken Bone</a></p></li>
-							    	<li><p class="search-item"><a href="">Cancer</a></p></li>
-							    	<li><p class="search-item"><a href="">Tumor</a></p></li>
-							    	<li><p class="search-item"><a href="">Migraine</a></p></li>
+							    	<c:forEach var="tempCondition" items="${conditions}">
+										<li><p class="search-item"><a href="${ pageContext.request.contextPath }/treatments/treatment/${ tempCondition.id }">${ tempCondition.name }</a></p></li>					
+									</c:forEach>
 							    </ul>
 							</div>
 						</div>

@@ -22,7 +22,7 @@
 									<form:input path="name" cssClass="form-control" placeholder="Enter condition name..." required="required" />
 								</div>
 								<div class="form-group">	
-									<label for="name">Condition Name</label>
+									<label for="name">Condition Description</label>
 									<form:textarea path="description" cssClass="form-control" placeholder="Enter condition description..." cols="30" rows="10" required="required" />
 								</div>
 								<div class="row">	

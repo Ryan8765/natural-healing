@@ -20,7 +20,7 @@ $(document).ready(function() {
 
 	var options = {
 	    valueNames: ['search-item'],
-	    page: 3,
+	    page: 10,
 	    innerWindow: 1,
 		plugins: [
 		  ListPagination({})
