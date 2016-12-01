@@ -13,5 +13,8 @@ public interface UserDAO {
 	//gets an individual user given the id
 	public User getUser(int userID);
 	
+	//save a new user to the database
+	public void saveNewUser(User theUser);
+	
 	
 }

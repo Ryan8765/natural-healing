@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.reviews.healing.natural.entity.User;
+import com.reviews.healing.natural.util.TokenGeneratorUtil;
 
 
 @Repository
@@ -49,6 +50,16 @@ public class UserDAOImpl implements UserDAO {
 		User theUser = (User) theQuery.getSingleResult();
 		
 		return theUser;
+	}
+
+
+	@Override
+	public void saveNewUser(User theUser) {
+		//create a new token for user
+		TokenGeneratorUtil emailToken = new TokenGeneratorUtil();
+		
+		
+		
 	}
 	
 

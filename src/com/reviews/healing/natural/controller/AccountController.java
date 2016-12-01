@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.reviews.healing.natural.dao.UserDAO;
@@ -52,7 +53,16 @@ public class AccountController {
 	//show create account form
 	@GetMapping("/create-account")
 	public String showCreateAccountForm( Model theModel ) {
+		User theUser = new User();
+		
+		theModel.addAttribute("user", theUser);
 		return "create-account";
+	}
+	
+	//post to create-account will add user to database
+	@PostMapping("/create-account")
+	public String createAccount( Model theModel ) {
+		return null;
 	}
 	
 	

@@ -14,6 +14,8 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "users")
 public class User {
+	
+	private String verifyPassword;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,6 +43,9 @@ public class User {
 	@Column(name = "salt")
 	private String salt;
 
+	@Column(name = "practitioner_type")
+	private String practitionerType;
+
 	@Column(name = "verified_user")
 	private boolean verifiedUser;
 
@@ -55,6 +60,9 @@ public class User {
 
 	@Column(name = "date_created")
 	private Date dateCreated;
+	
+	@Column(name = "email_token")
+	private String emailToken;
 
 	public User() {
 
@@ -140,11 +148,11 @@ public class User {
 		this.active = active;
 	}
 
-	public boolean isDoctor() {
+	public boolean getIsDoctor() {
 		return isDoctor;
 	}
 
-	public void setDoctor(boolean isDoctor) {
+	public void setIsDoctor(boolean isDoctor) {
 		this.isDoctor = isDoctor;
 	}
 
@@ -163,6 +171,35 @@ public class User {
 	public void setDateCreated(Date dateCreated) {
 		this.dateCreated = dateCreated;
 	}
+	
+	public String getPractitionerType() {
+		return practitionerType;
+	}
+
+	public void setPractitionerType(String practitionerType) {
+		this.practitionerType = practitionerType;
+	}
+	
+	
+
+	public String getVerifyPassword() {
+		return verifyPassword;
+	}
+
+	public void setVerifyPassword(String verifyPassword) {
+		this.verifyPassword = verifyPassword;
+	}
+	
+	
+
+	public String getEmailToken() {
+		return emailToken;
+	}
+
+	public void setEmailToken(String emailToken) {
+		this.emailToken = emailToken;
+	}
+
 
 	@Override
 	public String toString() {

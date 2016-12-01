@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <jsp:include page="partials/header.jsp">
 	<jsp:param name="title" value="New Account"/>
 </jsp:include>
@@ -20,20 +22,20 @@
 
 				<!-- doctor signup -->
 				<div id="doctor-signup" class="margin-top">
-					<h4 class="centered">Create New Doctor Account</h4>					
-					<form action="">
+					<h4 class="centered">Create New Doctor Account</h4>	
+					<form:form action="" modelAttribute="user" method="POST">
 						<div class="margin-top">
 							<div class="row">	
 								<div class="col-md-2 col-md-offset-4">
 									<div class="form-group">
 										<label for="">First Name</label>
-										<input class="form-control" type="text" placeholder="First Name">
+										<form:input path="firstName" cssClass="form-control" placeholder="First Name..." required="required" />
 									</div>
 								</div>
 								<div class="col-md-2">
 									<div class="form-group">
 										<label for="">Last Name</label>
-										<input class="form-control" type="text" placeholder="Last Name">
+										<form:input path="lastName" cssClass="form-control" placeholder="Last Name..." required="required" />
 									</div>
 								</div>
 							</div>
@@ -42,13 +44,14 @@
 							<div class="col-md-2 col-md-offset-4">
 								<div class="form-group">
 									<label for="">User Name</label>
-									<input class="form-control" type="text" placeholder="User Name">
+									<form:input path="username" cssClass="form-control" placeholder="User Name..." required="required" />
 								</div>
 							</div>
 							<div class="col-md-2">
 								<div class="form-group">
 									<label for="">Email</label>
-									<input class="form-control" type="email" placeholder="Email">
+									<form:input type="email" path="email" cssClass="form-control" placeholder="Email..." required="required" />
+									
 								</div>
 							</div>
 						</div>
@@ -56,13 +59,14 @@
 							<div class="col-md-2 col-md-offset-4">
 								<div class="form-group">
 									<label for="">Type of Practitioner</label>
-									<input class="form-control" type="text" placeholder="Practitioner Type">
+									<form:input path="practitionerType" cssClass="form-control" placeholder="Type of Practitioner..." />
 								</div>
 							</div>
 							<div class="col-md-2">
 								<div class="form-group">
 									<label for="">License Number</label>
-									<input class="form-control" type="text" placeholder="License Number">
+									<form:input path="licenseNumber" cssClass="form-control" placeholder="Enter License Number" required="required" />
+									
 								</div>
 							</div>
 						</div>
@@ -70,35 +74,40 @@
 							<div class="col-md-2 col-md-offset-4">
 								<div class="form-group">
 									<label for="">Password</label>
-									<input class="form-control" type="password" placeholder="Password">
+									<form:password path="password" cssClass="form-control" placeholder="Enter a password..." required="required" />
 								</div>
 							</div>
 							<div class="col-md-2">
 								<div class="form-group">
 									<label for="">Re-enter Password</label>
-									<input class="form-control" type="password" placeholder="Re-enter Password">
+									<form:password path="verifyPassword" cssClass="form-control" placeholder="Re-enter password..." required="required" />
+								
 								</div>
 							</div>
 						</div>
+						<!-- Hidden form elements -->
+						<form:hidden path="isDoctor" cssClass="form-control" value="True" />
+						<!-- Hidden form elements -->
 						<div class="row">
 							<div class="col-md-2 col-md-offset-5 margin-top">
 								<input type="submit" class="form-control styled-button" value="Submit" name="submit-doctor">
 							</div>
 						</div>
-					</form>
+					</form:form>
 				</div>
 				<!-- doctor signup -->
 				
 				<!-- genearl user signup -->
 				<div id="general-user-signup" class="margin-top">
 					<h4 class="centered">Create New General User Account</h4>
-					<form action="">
+					<form:form action="" modelAttribute="user" method="POST">
 						<div class="margin-top">
 							<div class="row">	
 								<div class="col-md-2 col-md-offset-5">
 									<div class="form-group">
 										<label for="">Username</label>
-										<input class="form-control" type="text" placeholder="Username">
+										<form:password path="username" cssClass="form-control" placeholder="Enter username..." required="required" />
+										
 									</div>
 								</div>
 							</div>
@@ -106,7 +115,8 @@
 								<div class="col-md-2 col-md-offset-5">
 									<div class="form-group">
 										<label for="">Email</label>
-										<input class="form-control" type="email" placeholder="Email">
+										<form:input type="email" path="email" cssClass="form-control" placeholder="Email..." required="required" />
+								
 									</div>
 								</div>
 							</div>
@@ -114,7 +124,8 @@
 								<div class="col-md-2 col-md-offset-5">
 									<div class="form-group">
 										<label for="">Password</label>
-										<input class="form-control" type="password" placeholder="Password">
+										<form:password path="password" cssClass="form-control" placeholder="Enter password..." required="required" />
+										
 									</div>
 								</div>
 							</div>
@@ -122,11 +133,14 @@
 								<div class="col-md-2 col-md-offset-5">
 									<div class="form-group">
 										<label for="">Re-enter Password</label>
-										<input class="form-control" type="text" placeholder="Re-enter Password">
+										<form:password path="verifyPassword" cssClass="form-control" placeholder="Re-enter password..." required="required" />
+										
 									</div>
 								</div>
 							</div>
-
+							<!-- Hidden form elements -->
+							<form:hidden path="isDoctor" cssClass="form-control" value="False" />
+							<!-- Hidden form elements -->
 							<div class="row">
 								<div class="col-md-2 col-md-offset-5 margin-top">
 									<input type="submit" class="form-control styled-button" value="Submit" name="submit-general-user">
@@ -134,7 +148,7 @@
 							</div>
 
 						</div>
-					</form>
+					</form:form>
 				</div>
 				<!-- general user signup -->
 

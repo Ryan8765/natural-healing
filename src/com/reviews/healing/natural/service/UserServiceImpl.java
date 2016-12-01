@@ -41,6 +41,13 @@ public class UserServiceImpl implements UserService {
 		User currentUser = userDAO.getUser(currentUserID);
 		return currentUser;
 	}
+
+
+	@Override
+	@Transactional
+	public void saveNewUser(User theUser) {
+		userDAO.saveNewUser( theUser );	
+	}
 	
 
 }

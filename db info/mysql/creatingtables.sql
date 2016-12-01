@@ -48,3 +48,30 @@ SET NEW.date_created = NOW();
 CREATE TRIGGER users_creation_timestamp BEFORE INSERT ON users
 FOR EACH ROW
 SET NEW.date_created = NOW();
+
+
+#create the comments table
+CREATE TABLE treatments (
+
+	id INT NOT NULL AUTO_INCREMENT,
+	description TEXT,
+	precautions TEXT,
+	related_user INT NOT NULL,
+	related_condition INT NOT NULL,
+	date_created DATETIME,
+	date_modified TIMESTAMP,
+	approved BOOLEAN DEFAULT 0,
+	PRIMARY KEY (id),
+	FOREIGN KEY (related_user) references users(id),
+	FOREIGN KEY (related_condition) references conditions(id)
+
+);
+
+
+#create trigger for date created in the treatments table
+CREATE TRIGGER users_treatments_timestamp BEFORE INSERT ON treatments
+FOR EACH ROW
+SET NEW.date_created = NOW();
+
+
+
