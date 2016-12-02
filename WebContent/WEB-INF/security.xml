@@ -6,12 +6,21 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 	
+	
+	<!-- Allow access to all css/js etc. -->
+	<http pattern="/resources/**" security="none"/>
+	
+	<!-- Used for creating roles -->
 	<http>
 		<csrf disabled="true"/>
+		<intercept-url pattern="/account/create-account" access="permitAll"/>
+		
 		<intercept-url pattern="/**" access="hasRole('USER')" />
 		<form-login />
 		<logout/>
 	</http>
+	
+	
 	
 	<!-- used to creating test users in the application -->
 	<authentication-manager>

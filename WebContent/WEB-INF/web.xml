@@ -22,7 +22,7 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
   
-  <!-- Load up application.xml as part of the loading of the application -->
+  <!-- Load the spring security and natural-healing-servlet.xml files -->
   <listener>
   	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
